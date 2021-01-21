@@ -34,8 +34,8 @@ Para exibir somente o resultado final, este parâmetros pode ser setado para fal
 
 Executando a aplicação:
 
-Abrir um console, selecionar a pasta onde o arquivos arquivos foram saldos.
-Executar os seguintes comandos (Java deve estar instalado, e o path deve estar configurado no windows).
+Abrir um console, selecionar a pasta onde o arquivos arquivos foram salvos.
+Executar os seguintes comandos (Java deve estar instalado, e o path deve estar configurado).
 
 ```
 javac DesafioStone.java
