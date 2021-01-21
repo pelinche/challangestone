@@ -1,16 +1,12 @@
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 
-public class main {
-    public static void main(String[] args) throws IOException {
-        Utils.log("Aplicação Iniciada",true);
+public class DesafioStone {
+    public static void main(String[] args)  {
+        Utils.log("Aplicacao Iniciada",true);
 
         //Inicializando as Variáveis
         List<Item> itemList = new ArrayList<>();
@@ -46,7 +42,7 @@ public class main {
 
 
 
-        Utils.log("Aplicação Finalizada",true);
+        Utils.log("Aplicacao Finalizada",true);
     }
 
 
@@ -86,4 +82,107 @@ public class main {
 
 
 
+}
+
+
+
+class Email {
+    private String mailAddress;
+
+
+    public Email(String mailAddress) {
+        this.mailAddress = mailAddress;
+    }
+
+    public String getMailAddress() {
+        return mailAddress;
+    }
+
+    public void setMailAddress(String mailAddress) {
+        this.mailAddress = mailAddress;
+    }
+}
+
+
+class Item {
+
+    private String description;
+    private Integer quantity;
+    private Integer unitaryValue;
+
+    public Item() {
+    }
+
+    public Item(String description, Integer quantity, Integer unitaryValue) {
+        this.description = description;
+        this.quantity = quantity;
+        this.unitaryValue = unitaryValue;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
+    public Integer getUnitaryValue() {
+        return unitaryValue;
+    }
+
+    public void setUnitaryValue(Integer unitaryValue) {
+        this.unitaryValue = unitaryValue;
+    }
+
+    public Integer getTotalItem(){
+        return (quantity * unitaryValue);
+    }
+
+    @Override
+    public String toString() {
+        return
+                "Produto: "+getDescription()+
+                        "  | Quantidade: "+getQuantity()+
+                        "  | Unitario: R$ "+Utils.formatFloat( Utils.convertDouble(getUnitaryValue())/100)+
+                        "  | Subtotal: R$ "+Utils.formatFloat( Utils.convertDouble(getTotalItem())/100);
+    }
+}
+
+class Utils {
+
+    public static String formatFloat(Double value){
+        return String.format("%.2f",value);
+    }
+    public static void log(String message,Boolean showDetails){
+        if(showDetails) {
+            System.out.println(message);
+        }
+    }
+
+    public static Double convertDouble(Integer value){
+        return Double.valueOf(value);
+    }
+
+    public static String lpad(String text,Integer quantity, char character ){
+        if (quantity > 0) {
+            StringBuffer result = new StringBuffer(quantity);
+
+            for (int i = text.length() ; i < quantity; i++) {
+                result.append(character);
+            }
+
+            return text + result.toString();
+        } else {
+            return text;
+        }
+    }
 }
