@@ -66,4 +66,4 @@ Aplicacao Iniciada
 Aplicacao Finalizada
 ```
 
-As classes Email, Item, e uma classe criada para reutilização de métodos para manipulação de variáveis estão inclusos no arquivo DesafioStone.java
+As classes Email, Item, e uma classe criada para reutilização de métodos para manipulação de variáveis (Utils) estão inclusos no pacote.
