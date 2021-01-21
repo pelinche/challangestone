@@ -12,10 +12,6 @@ public class DesafioStone {
         List<Item> itemList = new ArrayList<>();
         List<Email> emailList = new ArrayList<>();
 
-        //This flag turn on (true) or off(false) a detail log of
-        Boolean showDetailsLog = true;
-
-
         //Carregar a Lista de Itens - ADICIONAR A LISTA itemList UM NOVO Item
         //  itemList.add(new Item(description, quantity, unitaryValue));
         //#########################################################################################################################
@@ -35,21 +31,13 @@ public class DesafioStone {
         //#########################################################################################################################
         //FIM DE CARREGAR A LISTA DE EMAILS
 
-        Map<String, Integer> results = calculate(itemList,emailList, showDetailsLog);
+        Map<String, Integer> results = calculate(itemList,emailList, true);
         System.out.println(results);
-
-
-
-
-
         Utils.log("Aplicacao Finalizada",true);
     }
 
-
-
     public static Map<String, Integer> calculate(List<Item> itemList, List<Email> emailList, Boolean showDetails){
         Map<String, Integer> hashMap= new HashMap<String, Integer>();
-
         Integer totalValueList = 0;
         //Totalizando os valores da lista de itens
         Utils.log("---------------------------------------------- Itens da Lista --------------------------------------------------------",showDetails);
@@ -58,7 +46,7 @@ public class DesafioStone {
             totalValueList += item.getTotalItem();
         }
         Utils.log("        Valor Total da Lista => R$ "+Utils.formatFloat(Utils.convertDouble(totalValueList)/100),showDetails);
-
+        //
         Utils.log("---------------------------- Rateio dos valores --------------------------------------",showDetails);
         Integer i = 0;
         for(Email email : emailList){

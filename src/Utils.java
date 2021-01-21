@@ -16,11 +16,9 @@ public class Utils {
     public static String lpad(String text,Integer quantity, char character ){
         if (quantity > 0) {
             StringBuffer result = new StringBuffer(quantity);
-
             for (int i = text.length() ; i < quantity; i++) {
                 result.append(character);
             }
-
             return text + result.toString();
         } else {
             return text;

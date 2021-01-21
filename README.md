@@ -5,7 +5,7 @@ A linguagem de programação selecionada para a realização do desafio foi Java
 A aplicação está preparada para receber novos objetos do tipo Item e Email, que atendem ao requisito da entrada de dados.
 
 Para alimentar as Listas, novos itens devem ser adicionados as suas respectivas listas.
-No caso de Itens, a lista (itemList) é alimentada da seguinte forma (Linha 20 do código arquivo fonte DesafioStone.java):
+No caso de Itens, a lista (itemList) é alimentada da seguinte forma (Linha 16 do código arquivo fonte DesafioStone.java):
 ```
 itemList.add(new Item(description, quantity, unitaryValue));
 ```
@@ -14,7 +14,7 @@ onde:
     * quantity é a quantidade (Inteiro)
     * unitary é o valor unitário (Inteiro) - onde o centavo representa 1 (seguindo a recomendação do enunciado)
 
-No caso de Emails, a lista (emailList) é alimentada da seguinte forma (Linha 30 do código arquivo fonte DesafioStone.java):
+No caso de Emails, a lista (emailList) é alimentada da seguinte forma (Linha 26 do código arquivo fonte DesafioStone.java):
 ```
  emailList.add(new (Email(mailAddress));
 ```
@@ -23,17 +23,24 @@ onde:
 
 No código fonte estão 3 Itens, e 3 Emails.
 
-
-Na linha 16 do código fonte, é criada uma variável, e ela é inicializada com o valor positivo (true) para exibir os detalhes de log da aplicação. 
-Estas informações podem ser ocultadas setando esta variável para false.
-
+Na linha 34, o último parâmetro para o método calculate, é chamado de showDetails. Como padrão, ele está setado para true, e desta forma, os detalhes do cálculo são exibidos no console. 
+```
+        Map<String, Integer> results = calculate(itemList,emailList, true);
+```
+Para exibir somente o resultado final, este parâmetros pode ser setado para false
+```
+        Map<String, Integer> results = calculate(itemList,emailList, false);
+```
 
 Executando a aplicação:
 
-Abrir um console, selecionar a pasta onde o arquivo  DesafioStone.java foi salvo, e executar os seguintes comandos (Java deve estar instalado, e o path deve estar configurado no windows).
+Abrir um console, selecionar a pasta onde o arquivos arquivos foram saldos.
+Executar os seguintes comandos (Java deve estar instalado, e o path deve estar configurado no windows).
 
 ```
-java DesafioStone.java
+javac DesafioStone.java
+java DesafioStone
+
 ```
 
 Com os dados iniciais carregados nos vetores de Itens e de Emails, e com a flag que exibe os detalhes de Log no console ativos (showDetailsLog), o resultado é o seguinte:
