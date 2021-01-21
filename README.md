@@ -58,3 +58,5 @@ Aplicacao Iniciada
 {user3@provider=11400, z_user1@provider=11400, a_user2@provider=11400}
 Aplicacao Finalizada
 ```
+
+As classes Email, Item, e uma classe criada para reutilização de métodos para manipulação de variáveis estão inclusos no arquivo DesafioStone.java

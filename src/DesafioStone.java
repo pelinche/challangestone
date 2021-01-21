@@ -13,7 +13,7 @@ public class DesafioStone {
         List<Email> emailList = new ArrayList<>();
 
         //This flag turn on (true) or off(false) a detail log of
-        Boolean showDetailsLog = false;
+        Boolean showDetailsLog = true;
 
 
         //Carregar a Lista de Itens - ADICIONAR A LISTA itemList UM NOVO Item
