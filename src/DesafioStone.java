@@ -13,7 +13,7 @@ public class DesafioStone {
         List<Email> emailList = new ArrayList<>();
 
         //This flag turn on (true) or off(false) a detail log of
-        Boolean showDetailsLog = true;
+        Boolean showDetailsLog = false;
 
 
         //Carregar a Lista de Itens - ADICIONAR A LISTA itemList UM NOVO Item
@@ -52,7 +52,7 @@ public class DesafioStone {
 
         Integer totalValueList = 0;
         //Totalizando os valores da lista de itens
-        Utils.log("------------------------------------------------------------ Itens da Lista ----------------------------------------------------------------------",showDetails);
+        Utils.log("---------------------------------------------- Itens da Lista --------------------------------------------------------",showDetails);
         for (Item item : itemList){
             Utils.log(item.toString(),showDetails);
             totalValueList += item.getTotalItem();
